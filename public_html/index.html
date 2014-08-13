@@ -4,14 +4,23 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html ng-app>
+<html ng-app="myApp">
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <title>Trappeniers - Degreef</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+        <script src="main.js"></script>
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="login/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="login/css/style3.css" />
+        <link rel="stylesheet" type="text/css" href="login/css/animate-custom.css" />
     </head>
-    <body>
-        <div>
-            <input type="text" ng-model="yourName" placeholder="Enter a name" />
-            <h1>Hello, {{ yourName }}!</h1>
-        </div>
+    <body ng-controller="MainController">
+        <div ng-if="!isLoggedIn()" ng-include=" ' login/index.html ' "></div>
     </body>
 </html>
